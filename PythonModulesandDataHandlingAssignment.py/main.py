@@ -1,8 +1,9 @@
 import moods
 
-mood = input("How are you feeling today? (happy / sad / excited): ")
+i = input("How are you feeling today? (happy / sad / excited): ")
+mood = i.lower()
 
-if mood == 'Happy':
+if mood == 'happy':
     moods.happy_mood()
 elif mood == "sad":
     moods.sad_mood()

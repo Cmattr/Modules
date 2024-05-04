@@ -1,19 +1,19 @@
 
-def add_contact(contacts, name, number):
-    contacts.append({"name": name, "number": number})
-    print(contacts)
+def add_contact(contacts, name, number, email):
+    new_contact = {
+           "phone": number,
+           "email": email}
+    contacts[name] = new_contact
+    print(f"\n new contact for {name} added\n ")
 
 def delete_contact(contacts, name):
-    for  contact in contacts:
-        contact = name
-        print('1')
-        remove = contacts.pop({contact})
-        print('2')
-        print(remove)
+    contacts.pop(name)
+    print (f"\n{name} has been removed from your contacts\n")
 
 
                  
 
 def view_contacts(contacts):
-    print(contacts)
+    for key, value in contacts.items():
+        print(f"\n contact: {key, value} \n")
 

@@ -1,5 +1,5 @@
 import contact_managers
-contacts = []
+contacts = {}
 
 main_menu = ""
 while main_menu != 'quit':
@@ -15,7 +15,8 @@ while main_menu != 'quit':
     if main_menu == 'add':
         name = input('Please enter a name: ')
         number = input('Please enter a phone number: ')
-        contact_managers.add_contact(contacts, name, number)
+        email = input('please enter an email address: ')
+        contact_managers.add_contact(contacts, name, number, email)
     elif main_menu == 'delete':
         name = input("please enter the name of the contact you wish to delete: ")
         contact_managers.delete_contact(contacts, name)
